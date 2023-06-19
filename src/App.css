@@ -72,7 +72,7 @@ header {
 .form-wrapper {
   background-color: white;
   position: relative;
-  height: 290px;
+  height: 350px;
   top: 100px;
   right: 10%;
   width: 450px;
@@ -89,6 +89,14 @@ form {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+
+span {
+  font-weight: 600;
+  color: rgb(57, 118, 239);
+  position: relative;
+  bottom: 1.5rem;
+  left: 8rem;
 }
 
 h4 {

@@ -15,10 +15,18 @@ function App() {
 
   const handleHeightChange = (event) => {
     setHeight(Number(event.target.value));
+    if (system === 'imperial') {
+      setHeight(Number(event.target.value) * 2.54);
+
+    }
   };
 
   const handleWeightChange = (event) => {
     setWeight(Number(event.target.value));
+    if (system === 'imperial') {
+      setWeight(Number(event.target.value) * 0.453592);
+
+    }
   };
 
   const handleSystemChange = (event) => {
@@ -30,11 +38,9 @@ function App() {
 
     // Realizar cualquier acción adicional que desees con los valores
 
-    console.log('Height:', height);
-    console.log('Weight:', weight);
-    console.log('System:', system);
     setBMI((weight / ((height / 100) ** 2)).toFixed(1));
     console.log(BMI)
+
 
   };
 
@@ -95,6 +101,7 @@ function App() {
                 value={height}
                 onChange={handleHeightChange}
               />
+              <span>{system === 'metric' ? 'cm' : 'in'}</span>
             </div>
             <div className="weight">
               <label htmlFor="weight">Weight</label>
@@ -104,6 +111,8 @@ function App() {
                 value={weight}
                 onChange={handleWeightChange}
               />
+              <span>{system === 'metric' ? 'kg' : 'lbs'}</span>
+
             </div>
             {BMI ? <div className="welcome">
               <p>Your BMI is...</p>
