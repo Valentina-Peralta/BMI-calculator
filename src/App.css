@@ -171,6 +171,12 @@ input {
   box-shadow: 5px 5px 10px 0px #1a709241;
 }
 
+.age>div>svg {
+  padding: 0;
+  height: 30px;
+  width: 30px;
+}
+
 .habits-wrapper {
   background-color: #50c4f21a;
   border-radius: 20px;
@@ -207,4 +213,58 @@ p {
 
 .img-wrapper img {
   width: 100%;
+}
+
+@media only screen and (max-width:391px) {
+
+
+  .intro-wrapper {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .intro {
+    width: 100%;
+    height: 600px;
+    text-align: center;
+  }
+
+  .form-wrapper {
+    top: -50px;
+    right: 0%;
+    width: 100%;
+  }
+
+  main {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .img-wrapper {
+    width: 90%;
+  }
+
+  .text-wrapper {
+    width: 90%;
+  }
+
+  .habits-wrapper {
+    flex-direction: column;
+  }
+
+
+  .row-1,
+  .row-2,
+  .row-3 {
+    flex-direction: column;
+  }
+
+  aside {
+    margin-bottom: 4rem;
+  }
+
+  .limitations {
+    width: 100%;
+    text-align: center;
+  }
 }
